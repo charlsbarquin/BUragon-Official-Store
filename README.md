@@ -1,7 +1,5 @@
 # BUragon Official Store
 
-![BUragon Logo](assets/images/logos/bu-logo.png)
-
 A comprehensive e-commerce platform built specifically for Bicol University students, faculty, and alumni. The BUragon Official Store offers a wide range of university merchandise, academic supplies, and campus essentials with exclusive student discounts.
 
 ## 🌟 Features
