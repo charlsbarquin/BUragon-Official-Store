@@ -1,7 +1,8 @@
 FROM php:7.4-apache
 
-# Install PDO and MySQL extensions
-RUN docker-php-ext-install pdo pdo_mysql mysqli
+# Install PostgreSQL extensions (pdo_pgsql)
+RUN apt-get update && apt-get install -y libpq-dev \
+    && docker-php-ext-install pdo pdo_pgsql
 
 # Enable Apache rewrite module
 RUN a2enmod rewrite
@@ -12,7 +13,7 @@ COPY bicol-university-ecommerce/ /var/www/html/
 # Set working directory
 WORKDIR /var/www/html/
 
-# Create uploads directory
+# Create uploads directory for image uploads
 RUN mkdir -p uploads
 
 # Install Composer
