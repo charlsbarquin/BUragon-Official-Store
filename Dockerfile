@@ -6,8 +6,8 @@ RUN docker-php-ext-install pdo pdo_mysql mysqli
 # Enable Apache rewrite module
 RUN a2enmod rewrite
 
-# Copy project files
-COPY . /var/www/html/
+# Copy project files from the subfolder
+COPY bicol-university-ecommerce/ /var/www/html/
 
 # Set working directory
 WORKDIR /var/www/html/
