@@ -1,0 +1,367 @@
+/* About Us Page Styles */
+.about-main {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #222;
+    background: #f8fafc;
+    min-height: 100vh;
+}
+
+.enhanced-hero {
+    position: relative;
+    background: linear-gradient(135deg, #003366 0%, #00509e 100%);
+    color: #fff;
+    padding: 80px 0 60px 0;
+    text-align: center;
+    overflow: hidden;
+}
+.about-hero-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url('../images/bu-pattern.png') repeat, linear-gradient(135deg, #003366cc 0%, #00509ecc 100%);
+    opacity: 0.18;
+    z-index: 1;
+    pointer-events: none;
+}
+.enhanced-hero .container {
+    position: relative;
+    z-index: 2;
+}
+.about-hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    animation: fadeInDown 1s;
+}
+.about-tagline {
+    font-size: 1.2rem;
+    opacity: 0.95;
+    max-width: 600px;
+    margin: 0 auto 18px auto;
+    animation: fadeIn 1.2s;
+}
+.about-cta {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 12px 32px;
+    background: #ff6b00;
+    color: #fff;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    box-shadow: 0 4px 18px rgba(255,107,0,0.13);
+    transition: background 0.2s, transform 0.2s;
+    animation: fadeInUp 1.3s;
+}
+.about-cta:hover, .about-cta:focus {
+    background: #e05d00;
+    transform: translateY(-2px) scale(1.04);
+}
+
+.about-content {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+    margin: -40px auto 40px auto;
+    max-width: 800px;
+    padding: 40px 30px 30px 30px;
+    animation: fadeIn 1.2s;
+}
+.about-content h2 {
+    color: #003366;
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+.about-content p {
+    font-size: 1.08rem;
+    margin-bottom: 18px;
+    color: #444;
+    line-height: 1.7;
+}
+.about-features {
+    margin: 0 0 18px 0;
+    padding: 0;
+    color: #003366;
+    font-size: 1.05rem;
+    list-style: none;
+}
+.about-features li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.08rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.about-features i {
+    color: #ff6b00;
+    font-size: 1.2em;
+    min-width: 22px;
+}
+
+/* FAQ Section */
+.about-faq-section {
+    background: #f5f8fc;
+    padding: 50px 0 30px 0;
+    animation: fadeIn 1.3s;
+}
+.about-faq-section h2 {
+    color: #003366;
+    text-align: center;
+    margin-bottom: 28px;
+}
+.about-faq-list {
+    max-width: 700px;
+    margin: 0 auto;
+}
+.faq-item {
+    margin-bottom: 18px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    overflow: hidden;
+    transition: box-shadow 0.2s;
+}
+.faq-item:focus-within, .faq-item:hover {
+    box-shadow: 0 4px 18px rgba(0,0,0,0.09);
+}
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: #003366;
+    padding: 18px 22px;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.2s;
+    position: relative;
+}
+.faq-question:after {
+    content: '\25BC';
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    transition: transform 0.3s;
+    font-size: 1.1em;
+    color: #ff6b00;
+}
+.faq-question[aria-expanded="true"]:after {
+    transform: translateY(-50%) rotate(180deg);
+}
+.faq-answer {
+    display: none;
+    padding: 0 22px 18px 22px;
+    color: #444;
+    font-size: 1.01rem;
+    line-height: 1.6;
+    background: #fafdff;
+    border-top: 1px solid #e1e8ed;
+    animation: fadeIn 0.5s;
+}
+.faq-item.open .faq-answer {
+    display: block;
+}
+
+/* Testimonials */
+.about-testimonials {
+    background: #fff;
+    padding: 50px 0 30px 0;
+    animation: fadeIn 1.3s;
+}
+.about-testimonials h2 {
+    color: #003366;
+    text-align: center;
+    margin-bottom: 28px;
+}
+.about-testimonials-list {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.about-testimonials-list blockquote {
+    background: #f8fafc;
+    border-left: 5px solid #ff6b00;
+    padding: 18px 24px;
+    border-radius: 10px;
+    font-style: italic;
+    color: #333;
+    font-size: 1.08rem;
+    margin: 0;
+    position: relative;
+    animation: fadeIn 1.2s;
+}
+.about-testimonials-list blockquote span {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.98rem;
+    color: #888;
+    font-style: normal;
+}
+
+/* Contact Section */
+.about-contact {
+    background: #f5f8fc;
+    padding: 50px 0 30px 0;
+    animation: fadeIn 1.3s;
+}
+.about-contact h2 {
+    color: #003366;
+    text-align: center;
+    margin-bottom: 28px;
+}
+.about-contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    padding: 28px 22px 18px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.form-group label {
+    font-weight: 600;
+    color: #003366;
+    margin-bottom: 6px;
+    display: block;
+}
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #e1e8ed;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+    background: #fafdff;
+    transition: border 0.2s;
+}
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #ff6b00;
+    outline: none;
+}
+.about-contact-submit {
+    background: #ff6b00;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 28px;
+    font-size: 1.08rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+.about-contact-submit:hover, .about-contact-submit:focus {
+    background: #e05d00;
+    transform: translateY(-2px) scale(1.04);
+}
+.contact-form-status {
+    margin-top: 10px;
+    font-size: 1.01rem;
+    font-weight: 500;
+    color: #28a745;
+    text-align: center;
+}
+
+/* Back to Top Button */
+#backToTop {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    background: #003366;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.13);
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, background 0.2s, transform 0.2s;
+    z-index: 100;
+}
+#backToTop.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+#backToTop:hover, #backToTop:focus {
+    background: #ff6b00;
+    transform: scale(1.08);
+}
+
+.size-guide-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 32px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+}
+.size-guide-table th, .size-guide-table td {
+    border: 2px solid var(--border-color);
+    padding: 12px 16px;
+    text-align: center;
+    font-size: 1.08rem;
+}
+.size-guide-table th {
+    background: var(--gray-light);
+    color: var(--primary);
+    font-weight: 700;
+    border-bottom: 3px solid var(--secondary);
+}
+.size-guide-table tr {
+    transition: background 0.2s;
+}
+.size-guide-table tr:hover {
+    background: #fafdff;
+}
+
+@media (max-width: 600px) {
+    .about-content {
+        padding: 24px 10px 18px 10px;
+    }
+    .about-hero h1 {
+        font-size: 2rem;
+    }
+    .about-tagline {
+        font-size: 1rem;
+    }
+    .about-testimonials-list blockquote {
+        padding: 12px 10px;
+        font-size: 0.98rem;
+    }
+    .about-contact-form {
+        padding: 16px 6px 10px 6px;
+    }
+    #backToTop {
+        bottom: 16px;
+        right: 16px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: none; }
+}
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: none; }
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: none; }
+} 
