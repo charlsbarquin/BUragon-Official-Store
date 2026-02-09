@@ -55,9 +55,9 @@ class HomepageBackend {
             
             // Orders in last 30 days
             $stmt = $this->pdo->prepare("
-                SELECT COUNT(*)
-                FROM orders
-                WHERE created_at >= NOW() - INTERVAL '30 days'
+                SELECT COUNT(*) 
+                FROM orders 
+                WHERE created_at >= DATE_SUB(NOW(), INTERVAL 30 DAY) 
                 AND status != 'cancelled'
             ");
             $stmt->execute();
@@ -250,7 +250,7 @@ class HomepageBackend {
                     e.status
                 FROM events e
                 WHERE e.status = 'active'
-                AND e.event_date >= CURRENT_DATE
+                AND e.event_date >= CURDATE()
                 ORDER BY e.event_date ASC
                 LIMIT ?
             ");
@@ -283,7 +283,7 @@ class HomepageBackend {
                     o.status
                 FROM offers o
                 WHERE o.status = 'active'
-                AND o.valid_until >= CURRENT_DATE
+                AND o.valid_until >= CURDATE()
                 ORDER BY o.created_at DESC
                 LIMIT 1
             ");
